@@ -28,7 +28,7 @@ void write(uint8_t value) const
 The write member function calls the Arduino digitalWrite function.  However, a pin argument is not required as the object already knows what pin it is supposed to use
 
 ```
-uint8_t read() const
+int read() const
 ```
 
 The read member function calls the Arduino digitalRead function.  Once again, there is no pin argument required.
