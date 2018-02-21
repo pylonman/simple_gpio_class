@@ -10,9 +10,9 @@ void loop()
 {
   Output led{13};
   while(1){
-    led.set(HIGH);
+    led = HIGH;
     delay(100);
-    led.set(LOW);
+    led = LOW;
     delay(100);
   }
 }
