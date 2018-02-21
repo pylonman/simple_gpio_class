@@ -1,17 +1,18 @@
 #include "simple_gpio_class.h"
 
-void setup() {
-  // put your setup code here, to run once:
+using namespace simple_gpio;
 
+void setup()
+{
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-  gpio led{13, OUTPUT};
+void loop()
+{
+  Output led{13};
   while(1){
-    led.write(HIGH);
+    led.set(HIGH);
     delay(100);
-    led.write(LOW);
+    led.set(LOW);
     delay(100);
   }
 }
