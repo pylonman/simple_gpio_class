@@ -1,1 +1,4 @@
-gpio	KEYWORD1
+Input	KEYWORD1
+Output	KEYWORD1
+set	KEYWORD2
+get	KEYWORD2
