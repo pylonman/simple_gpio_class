@@ -5,17 +5,17 @@ Release date: 2017-07-19 <br>
 
 ## Summary
 
-A header only C++ library for the Arduino IDE that allows you to create and initialize a gpio object with a single line of code.  After initialization the gpio object stores the pin argument so that the user is no longer responsible for keeping track of it.  Like the name suggests it is simple; it only performs digital read and write operations.
+A header only C++ wrapper for the Arduino framework that allows you to create and initialize a gpio object with a single line of code.  After initialization the gpio object stores the pin argument so that the user is no longer responsible for keeping track of it.  Like the name suggests it is simple; it only performs digital read and write operations.
 
 ## Interface
 
 ```
 Output(uint8_t pin) : pin_num(pin)
 Input(uint8_t pin) : pin_num(pin)
-Input(uint8_t pin, uint8_t mode) : pin_num(pin)
+Input_PU(uint8_t pin) : pin_num(pin)
 ```
 
-The Input / Output object is created after passing a pin value to the constructor.  The pin argument is passed and stored within the object on declaration and the Arduino pinMode function is called during construction.  If a second argument is passed to the Input constructor then the INPUT_PULLUP pinMode argument is applied.
+The Input / Output object is created after passing a pin value to the constructor.  The pin argument is passed and stored within the object on declaration and the Arduino pinMode function is called during construction.
 
 ```
 uint8_t GPIO::pin() const
@@ -27,7 +27,7 @@ The pin function returns the value of pin_num.
 void Output::set(uint8_t value) const
 ```
 
-The set member function calls the Arduino digitalWrite function.  However, a pin argument is not required as the object already knows what pin it is supposed to use.  The assignment operator '=' is overloaded to call the set function.
+The set member function calls the Arduino digitalWrite function.  However, a pin argument is not required as the object already knows what pin it is supposed to use.  Additionally, the assignment operator '=' is overloaded to call the set function.
 
 ```
 int Input::get() const
