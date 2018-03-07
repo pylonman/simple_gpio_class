@@ -1,7 +1,7 @@
 # Simple gpio class for Arduino
 
-Version: 1.0 <br>
-Release date: 2017-07-19 <br>
+Version: 1.1 <br>
+Release date: 2018-03-07 <br>
 
 ## Summary
 
@@ -12,7 +12,7 @@ A header only C++ wrapper for the Arduino framework that allows you to create an
 ```
 Output(uint8_t pin) : pin_num(pin)
 Input(uint8_t pin) : pin_num(pin)
-Input_PU(uint8_t pin) : pin_num(pin)
+InputPU(uint8_t pin) : pin_num(pin)
 ```
 
 The Input / Output object is created after passing a pin value to the constructor.  The pin argument is passed and stored within the object on declaration and the Arduino pinMode function is called during construction.
