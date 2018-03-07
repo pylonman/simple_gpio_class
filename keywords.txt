@@ -1,5 +1,9 @@
 Input	KEYWORD1
-Input_PU  KEYWORD1
+
+InputPU	KEYWORD1
+
 Output	KEYWORD1
+
 set	KEYWORD2
+
 get	KEYWORD2

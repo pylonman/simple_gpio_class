@@ -31,10 +31,10 @@ namespace simple_gpio
 		operator bool() { return digitalRead(pin_num); };
 	};
 	
-	class Input_PU : public gpio
+	class InputPU : public gpio
 	{
 	public:
-		Input_PU(uint8_t pin): gpio(pin) { pinMode(pin_num, INPUT_PULLUP); };
+		InputPU(uint8_t pin): gpio(pin) { pinMode(pin_num, INPUT_PULLUP); };
 		int get() const { return digitalRead(pin_num); };
 		bool operator ==(int state) { return digitalRead(pin_num) == state ? true : false; };
 		operator bool() { return digitalRead(pin_num); };
